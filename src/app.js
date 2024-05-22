@@ -26,8 +26,8 @@ const saySomething = (req, res) => {
 };
 
 // Routes
-app.get("/say/:greeting", saySomething);
 app.get("/say/goodbye", sayGoodbye);
 app.get("/say/welcome", sayWelcome);
+app.get("/say/:greeting", saySomething); //Define this route last so that it will not interfere 
 
 module.exports = app;
